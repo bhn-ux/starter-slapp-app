@@ -92,7 +92,7 @@ slapp.message(/^(thanks|thank you)/i, ['mention', 'direct_message'], (msg) => {
 })
 
 // Add reaction for any message reacted to
-slapp.event('robot_face', 'reaction_added', (msg) => {
+slapp.message('robot_face', 'reaction_added', (msg) => {
   let token = msg.meta.bot_token
   let id = msg.body.event.item.ts
   let channel = msg.body.event.item.channel
